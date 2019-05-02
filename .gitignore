@@ -26,6 +26,10 @@
 *.a
 *.lib
 
+# Folders
+.gradle/
+build/
+
 # Executables
 *.exe
 *.out
