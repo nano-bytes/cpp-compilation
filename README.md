@@ -6,3 +6,5 @@ The ways of compile cpp that we are going to see in this repos are the following
 * [Compile Directly with GCC](direct-or-make/)
 * [Compile with Makefile](direct-or-make/)
 * [Compile with Gradle](gradle-cpp/)
+* [Structs and Headers](struct-and-headers/)
+
