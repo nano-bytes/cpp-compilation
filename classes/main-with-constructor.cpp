@@ -7,21 +7,24 @@ using namespace std;
  * and print its info
  */
 class Person { // Just Declaration of a class
+public: 
+    // Constructor
+    Person(char *name, char *lastName) 
+    :name(name), lastName(lastName) {}
+    
+    // Destructor
+    ~Person() {
+        cout << "Destructor is called!!" << endl;
+//         delete[] name;
+//         delete[] lastName;
+    }
+    
 private: // Private methods and/or variables
     char *name, *lastName;
     int age;
     
 public: // Public methods and/or variables
     void printPersonInfo();
-    
-    void setName(char* personName) {
-        name = personName;
-        
-    }
-    
-    void setLastName(char* personLastName) {
-        lastName = personLastName;
-    }
     
     void setAge(int personAge) {
         age = personAge;
@@ -30,15 +33,22 @@ public: // Public methods and/or variables
 
 int main() {
     
-    Person person; // New Instance of Person
-    
     char personName[50] = "John";
     char personLastName[50] = "Doe";
     
-    person.setName(personName);
-    person.setLastName(personLastName);
-    person.setAge(31);
-    person.printPersonInfo();
+    // New Instance of Person with a constructor in it
+    Person *person = new Person(personName, personLastName);
+   
+    person -> setAge(31);
+    
+    cout << "Print Person info before use destructor" << endl;
+    cout << endl;
+    person -> printPersonInfo();
+    delete person; // Call destructor to free memory
+   
+    cout << endl;
+    cout << "Try to print Person info after use destructor" << endl;
+    person -> printPersonInfo();
     
     return 0;
 }
@@ -53,3 +63,4 @@ void Person::printPersonInfo() {
     cout << "Last Name is: " << lastName << endl;
     cout << "Age is: " << age << endl;
 }
+
