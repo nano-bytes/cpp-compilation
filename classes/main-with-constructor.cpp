@@ -10,13 +10,13 @@ class Person { // Just Declaration of a class
 public: 
     // Constructor
     Person(char *name, char *lastName) 
-    :name(name), lastName(lastName) {}
+    :name(name), lastName(lastName) {
+        cout << "Constructor is called!!" << endl;
+    }
     
     // Destructor
     ~Person() {
         cout << "Destructor is called!!" << endl;
-//         delete[] name;
-//         delete[] lastName;
     }
     
 private: // Private methods and/or variables
@@ -56,7 +56,7 @@ int main() {
 /**
  * This function was declared on Person object but
  * not defined in it, in order to defined out of Person
- * ambit we need to use "::"
+ * scope we need to use "::"
  */
 void Person::printPersonInfo() {
     cout << "Name is: " << name << endl;

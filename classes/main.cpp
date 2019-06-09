@@ -46,7 +46,7 @@ int main() {
 /**
  * This function was declared on Person object but
  * not defined in it, in order to defined out of Person
- * ambit we need to use "::"
+ * scope we need to use "::"
  */
 void Person::printPersonInfo() {
     cout << "Name is: " << name << endl;
