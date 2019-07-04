@@ -1,11 +1,7 @@
 #include <iostream>
+#include "math-operations.cpp"
 
 using namespace std;
-
-int sum(int, int);
-int subtract(int, int);
-int multiply(int, int);
-int division(int, int);
 
 int main(int argc, char *argv[]) {
     int firstNumber, secondNumber, result;
@@ -22,21 +18,4 @@ int main(int argc, char *argv[]) {
     result = division(firstNumber, secondNumber);
     cout << "Result of division is: " << result <<endl;
     
-}
-
-int sum(int firstNumber, int secondNumber) {
-    return firstNumber + secondNumber;
-}
-
-int subtract(int firstNumber, int secondNumber) {
-    return firstNumber - secondNumber;
-}
-
-
-int multiply(int firstNumber, int secondNumber) {
-    return firstNumber * secondNumber;
-}
-
-int division(int firstNumber, int secondNumber) {
-    return firstNumber / secondNumber;
 }
