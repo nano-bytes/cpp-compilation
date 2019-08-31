@@ -9,4 +9,7 @@ The ways of compile cpp that we are going to see in this repos are the following
 * [Structs and Headers](struct-and-headers/)
 * [Pointers](pointers/)
 * [Classes](classes/)
+* [Unit Tests](unit-tests/)
+* [Templates](templates/)
+* [Exceptions](exceptions/)
 
